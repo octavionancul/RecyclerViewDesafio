@@ -73,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
                         String type = typeEt.getText().toString();
                         int years = Integer.parseInt(yearsEt.getText().toString());
 
+
                         Wine wine = new Wine();
                         wine.setBrand(brand);
                         wine.setType(type);
