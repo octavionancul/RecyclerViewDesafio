@@ -71,17 +71,20 @@ public class MainActivity extends AppCompatActivity {
 
                         String brand = brandEt.getText().toString();
                         String type = typeEt.getText().toString();
+                        if(brand.trim().length()>0 && type.trim().length()>0 && yearsEt.getText().toString().trim().length()>0) {
                         int years = Integer.parseInt(yearsEt.getText().toString());
 
+                            Wine wine = new Wine();
+                            wine.setBrand(brand);
+                            wine.setType(type);
+                            wine.setYears(years);
 
-                        Wine wine = new Wine();
-                        wine.setBrand(brand);
-                        wine.setType(type);
-                        wine.setYears(years);
+                            updateList(wine);
 
-                        updateList(wine);
-
-                        dialog.dismiss();
+                            dialog.dismiss();
+                        }else{
+                            Toast.makeText(MainActivity.this, "Ingrese todos los datos", Toast.LENGTH_SHORT).show();
+                        }
 
                      //   Toast.makeText(MainActivity.this, "clickk", Toast.LENGTH_SHORT).show();
 
