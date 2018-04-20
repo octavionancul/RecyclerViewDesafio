@@ -86,8 +86,6 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(MainActivity.this, "Ingrese todos los datos", Toast.LENGTH_SHORT).show();
                         }
 
-                     //   Toast.makeText(MainActivity.this, "clickk", Toast.LENGTH_SHORT).show();
-
                     }
                 });
                 dialog.show();
@@ -98,6 +96,6 @@ public class MainActivity extends AppCompatActivity {
     public void updateList(Wine wine){
 
         adapter.update(wine);
-     //   Toast.makeText(this, wine.getBrand(), Toast.LENGTH_SHORT).show();
+
     }
 }
